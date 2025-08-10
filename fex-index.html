@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Web Developer — Mark Rod Peralta Cadayong</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .edu-img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 0.75rem;
+    }
+
+    .edu {
+      margin-bottom: 20px;
+
+    }
+
+    :root {
+      --accent: #0066ff;
+      --muted: #6b7280;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: #0f172a;
+      line-height: 1.5
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    .brand img {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      object-fit: cover
+    }
+
+    nav a {
+      margin-left: 18px;
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 600
+    }
+
+    nav a:hover {
+      color: var(--accent)
+    }
+
+    /* Banner */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 28px;
+      align-items: center;
+      margin: 28px 0
+    }
+
+    .hero .intro h1 {
+      font-size: 32px;
+      margin: 0 0 8px
+    }
+
+    .hero .intro p {
+      margin: 0 0 16px;
+      color: var(--muted)
+    }
+
+    .cta {
+      display: flex;
+      gap: 12px
+    }
+
+    .btn {
+      background: var(--accent);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600
+    }
+
+    .profile-card {
+      background: var(--card);
+      padding: 18px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(2, 6, 23, 0.06);
+      text-align: center
+    }
+
+    .profile-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 8px
+    }
+
+    .profile-card .role {
+      margin-top: 12px;
+      color: var(--muted);
+      font-weight: 600
+    }
+
+    /* Sections */
+    section {
+      margin: 28px 0
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px
+    }
+
+    .section-title h2 {
+      margin: 0
+    }
+
+    /* Education */
+    .edu {
+      display: flex;
+      gap: 18px;
+      align-items: center
+    }
+
+    .edu img {
+      width: 160px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px
+    }
+
+    .edu .meta {
+      background: var(--card);
+      padding: 16px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(2, 6, 23, 0.04);
+    }
+
+    /* Skills */
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px
+    }
+
+    .chip {
+      background: #fff;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid #e6e9ee;
+      font-weight: 600
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px
+    }
+
+    .project {
+      background: var(--card);
+      padding: 16px;
+      border-radius: 12px;
+      min-height: 160px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      box-shadow: 0 6px 18px rgba(2, 6, 23, 0.04)
+    }
+
+    .project .title {
+      font-weight: 700
+    }
+
+    .project .desc {
+      color: var(--muted);
+      flex: 1
+    }
+
+    .project .meta {
+      display: flex;
+      gap: 8px;
+      align-items: center
+    }
+
+    .tag {
+      padding: 6px 8px;
+      border-radius: 8px;
+      background: #f1f5f9;
+      font-weight: 600;
+      border: 1px solid #e6eefb
+    }
+
+    /* Contact */
+    .contact {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 18px
+    }
+
+    form {
+      background: var(--card);
+      padding: 16px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(2, 6, 23, 0.04)
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #e6e9ee;
+      margin-bottom: 10px
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 14px
+    }
+
+    /* Footer */
+    footer {
+      padding: 18px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px
+    }
+
+    /* Responsive */
+    @media (max-width:880px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .contact {
+        grid-template-columns: 1fr
+      }
+
+      nav a {
+        margin-left: 10px
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <img src="./images/my-picture.jpeg" alt="logo">
+        <div>
+          <div style="font-weight:800">Mark Rod Cadayong</div>
+          <div class="muted" style="font-size:13px">Web Developer • Wordpress · PHP · Vue · Laravel</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Banner / Hero -->
+    <section class="hero" id="about">
+      <div class="intro">
+        <h1>Hello — I'm Mark, a Web Developer</h1>
+        <p>I build web applications using PHP, Laravel, Vue.js and Wordpress. I focus on clean, maintainable code, good
+          UX, and shipping features fast.</p>
+
+        <div class="cta">
+          <a class="btn" href="#projects">View Projects</a>
+          <a style="padding:10px 16px;border-radius:10px;border:1px solid #e6e9ee;text-decoration:none;font-weight:600"
+            href="#contact">Contact Me</a>
+        </div>
+      </div>
+      <aside class="profile-card">
+        <img src="./images/my-picture.jpeg" alt="profile image">
+        <div class="role">Full-stack Web Developer</div>
+      </aside>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <div class="section-title">
+        <h2>Education</h2>
+        <div class="muted">Academic background & training</div>
+      </div>
+      <div class="edu">
+        <img src="./images/psu-logo.png" alt="school">
+        <div class="meta">
+          <h3 style="margin-top:0">Bachelor of Science in Information Technology Major in Web and Mobile Technology</h3>
+          <div class="muted">Pangasinan State University San Carlos Campus — 2019 – 2023</div>
+          <p style="margin-top:12px">
+            Served as class president, actively leading class activities and representing the section in various events.
+            Joined the IT Fest where I competed as a Web Developer, achieving <strong>1st Runner-Up</strong>.
+            Participated in quiz bee competitions and was a candidate for <strong>Best Capstone Project</strong> for our
+            final year project.
+            My college journey was filled with teamwork, coding challenges, and learning experiences that shaped my
+            skills and discipline.
+
+          </p>
+        </div>
+      </div>
+
+
+      <div class="edu">
+        <img src="./images/lilimasan-high-school-logo.png" alt="school">
+        <div class="meta">
+          <h3 style="margin-top:0">Lilimasan National High School — Senior High</h3>
+          <div class="muted">General Academic Strand (GAS) — 2017 – 2019</div>
+
+          <p style="margin-top:12px">
+            Developed strong foundations in research, communication, and leadership.
+            Participated in school activities, group presentations, and academic competitions that built my confidence
+            in public speaking and problem-solving.
+
+          </p>
+        </div>
+      </div>
+
+      <div class="edu">
+        <img src="./images/lilimasan-high-school-logo.png" alt="school">
+        <div class="meta">
+          <h3 style="margin-top:0">Lilimasan National High School — Junior High</h3>
+          <div class="muted">2013 – 2017</div>
+          <p style="margin-top:12px">
+            Learned essential teamwork and time management skills.
+            Engaged in extracurricular activities that taught me discipline, respect, and cooperation with peers and
+            teachers.
+
+          </p>
+
+        </div>
+      </div>
+
+      <div class="edu">
+        <img src="./images/lilimasan-high-school-logo.png" alt="school">
+        <div class="meta">
+          <h3 style="margin-top:0">Lilimasan Elementary School </h3>
+          <div class="muted">2007 – 2013</div>
+          <p style="margin-top:12px">
+            My first steps in education where I developed curiosity, discipline, and the ability to adapt quickly to
+            challenges.
+            Participated in school programs and academic events that sparked my interest in technology.
+
+          </p>
+
+        </div>
+      </div>
+
+
+    </section>
+
+    <!-- Skills / Languages -->
+    <section id="skills">
+      <div class="section-title">
+        <h2>Languages & Technologies</h2>
+        <div class="muted">Tools I use regularly</div>
+      </div>
+      <div class="chips">
+        <div class="chip">PHP</div>
+        <div class="chip">Laravel</div>
+        <div class="chip">Vue.js</div>
+        <div class="chip">HTML & CSS</div>
+        <div class="chip">JavaScript </div>
+        <div class="chip">JQuery </div>
+        <div class="chip">MySQL</div>
+        <div class="chip">Git</div>
+        <div class="chip">Wordpress</div>
+        <div class="chip">Wordpress Theme</div>
+        <div class="chip">Wordpress Elementor</div>
+        <div class="chip">Tailwind CSS</div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="section-title">
+        <h2>Selected Projects</h2>
+        <div class="muted">A few highlights — click to view</div>
+      </div>
+      <div class="projects-grid">
+        <article class="project">
+          <div class="title">Tripidkard Reward System</div>
+          <div class="desc">A procedural PHP + Laravel hybrid app to manage merchants, approvals, image uploads, and
+            activity logging. Includes a Vue front-end for admin tables and merchant edits.</div>
+          <div class="meta">
+            <div class="tag">Vue</div>
+            <div class="tag">Laravel</div>
+            <a style="margin-left:auto;text-decoration:none;font-weight:700;color:var(--accent)" href="#">View</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="title">Appointment Booking System</div>
+          <div class="desc">Procedural PHP booking system with 2-hour slot management, QR payment modal, and overlap
+            checking to prevent double-booking.</div>
+          <div class="meta">
+            <div class="tag">PHP</div>
+            <div class="tag">MySQL</div>
+            <a style="margin-left:auto;text-decoration:none;font-weight:700;color:var(--accent)" href="#">View</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="title">Raffle Join Widget</div>
+          <div class="desc">Vue component that handles raffle joining, optional order number modal, and validation.
+            Integrates with Laravel backend for joining logic.</div>
+          <div class="meta">
+            <div class="tag">Vue</div>
+            <div class="tag">Laravel</div>
+            <a style="margin-left:auto;text-decoration:none;font-weight:700;color:var(--accent)" href="#">View</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="title">Birthday Greeting Web App</div>
+          <div class="desc">Interactive single-page app with modal inputs for name, image upload, animated greetings,
+            and customizable messages.</div>
+          <div class="meta">
+            <div class="tag">HTML</div>
+            <div class="tag">JavaScript</div>
+            <a style="margin-left:auto;text-decoration:none;font-weight:700;color:var(--accent)" href="#">View</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="section-title">
+        <h2>Contact Me</h2>
+        <div class="muted">Let's build something great together</div>
+      </div>
+      <div class="contact">
+        <form onsubmit="event.preventDefault(); alert('Thanks! I will reply as soon as possible.');">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+          <input type="text" name="subject" placeholder="Subject">
+          <textarea name="message" rows="6" placeholder="Message" required></textarea>
+          <div style="display:flex;gap:10px;justify-content:flex-end">
+            <button class="btn" type="submit">Send Message</button>
+          </div>
+        </form>
+
+        <aside style="background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(2,6,23,0.04)">
+          <h3 style="margin-top:0">Contact Info</h3>
+          <div class="muted">Email</div>
+          <div style="font-weight:700;margin-bottom:8px">markrodcadayong17@gmail.com</div>
+          <div class="muted">Location</div>
+          <div style="font-weight:700;margin-bottom:8px">San Carlos City, Pangasinan</div>
+          <div style="font-weight:700;margin-bottom:8px">Cupang, Antipolo City, Rizal</div>
+          <div class="muted">Available</div>
+          <div style="font-weight:700">Remote & onsite</div>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <div class="muted">© 2025 Mark Rod Cadayong. Built with care — HTML & CSS. • <a href="#"
+          style="color:var(--accent);text-decoration:none">Download CV</a></div>
+    </footer>
+  </div>
+</body>
+
+</html>
