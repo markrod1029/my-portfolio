@@ -7,30 +7,9 @@
   <title>Web Developer — Mark Rod Peralta Cadayong</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    .fade-up {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-
-    .fade-up.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .edu-img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 0.75rem;
-    }
-  </style>
+ 
 </head>
 
 <body class="bg-gray-50 text-gray-900 font-sans">
@@ -381,69 +360,65 @@
       </button>
     </form>
 
-    <!-- Contact Info -->
-    <div class="bg-white p-6 rounded-lg shadow-lg">
-      <h3 class="font-semibold text-lg mb-4">Contact Info</h3>
+<!-- Contact Info -->
+<div class="bg-white p-6 rounded-lg shadow-lg">
+  <h3 class="font-semibold text-lg mb-4">Contact Info</h3>
 
-      <!-- Email -->
-      <p class="flex items-center gap-2 text-gray-600 mb-2">
-        <i class="fas fa-envelope text-blue-600"></i>
-        <a href="mailto:markrodcadayong17@gmail.com" class="hover:text-blue-600">
-          markrodcadayong17@gmail.com
-        </a>
-      </p>
+  <!-- Email -->
+  <p class="flex items-center gap-2 text-gray-600 mb-2">
+    <i class="fas fa-envelope text-blue-600"></i>
+    <a href="mailto:markrodcadayong17@gmail.com" class="hover:text-blue-600">
+      markrodcadayong17@gmail.com
+    </a>
+  </p>
 
-      <!-- Phone -->
-      <p class="flex items-center gap-2 text-gray-600 mb-2">
-        <i class="fas fa-phone-alt text-green-600"></i>
-        <a href="tel:+639452318814" class="hover:text-green-600">
-          +63 945 231 8814
-        </a>
-      </p>
+  <!-- Phone -->
+  <p class="flex items-center gap-2 text-gray-600 mb-2">
+    <i class="fas fa-phone-alt text-green-600"></i>
+    <a href="tel:+639452318814" class="hover:text-green-600">
+      +63 945 231 8814
+    </a>
+  </p>
 
-      <!-- Locations -->
-      <p class="flex items-center gap-2 text-gray-600">
-        <i class="fas fa-map-marker-alt text-red-500"></i>
-        Cupang, Antipolo City, Rizal, Philippines
-      </p>
-      <p class="flex items-center gap-2 text-gray-600 mb-4">
-        <i class="fas fa-map-marker-alt text-red-500"></i>
-        San Carlos City, Pangasinan, Philippines
-      </p>
+  <!-- Locations -->
+  <p class="flex items-center gap-2 text-gray-600">
+    <i class="fas fa-map-marker-alt text-red-500"></i>
+    Cupang, Antipolo City, Rizal, Philippines
+  </p>
+  <p class="flex items-center gap-2 text-gray-600 mb-4">
+    <i class="fas fa-map-marker-alt text-red-500"></i>
+    San Carlos City, Pangasinan, Philippines
+  </p>
 
-      <!-- Social Links -->
-      <div class="flex items-center gap-4 mt-4 text-2xl">
-        <a href="https://www.facebook.com/mrcmrkrd/" target="_blank" class="text-blue-600 hover:scale-110 transition">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://linkedin.com/in/mark-rod-cadayong-08a815193/" target="_blank"
-          class="text-blue-500 hover:scale-110 transition">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/markrod1029" target="_blank" class="text-gray-800 hover:scale-110 transition">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://instagram.com/mrk.rhd/" target="_blank" class="text-pink-500 hover:scale-110 transition">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.upwork.com/freelancers/~0154037f742efd6679" target="_blank"
-          class="text-green-500 hover:scale-110 transition">
-          <i class="fas fa-briefcase"></i>
-        </a>
-      </div>
+  <!-- Social Links -->
+  <div class="flex items-center gap-4 mt-4 text-2xl">
+    <a href="https://www.facebook.com/mrcmrkrd/" target="_blank" class="text-blue-600 hover:scale-110 transition">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://linkedin.com/in/mark-rod-cadayong-08a815193/" target="_blank" class="text-blue-500 hover:scale-110 transition">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/markrod1029" target="_blank" class="text-gray-800 hover:scale-110 transition">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://instagram.com/mrk.rhd/" target="_blank" class="text-pink-500 hover:scale-110 transition">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.upwork.com/freelancers/~0154037f742efd6679" target="_blank" class="text-green-500 hover:scale-110 transition">
+      <i class="fas fa-briefcase"></i>
+    </a>
+  </div>
 
-      <!-- Resume Section -->
-      <div class="mt-6 flex gap-3">
-        <a href="markRodResume.pdf" target="_blank"
-          class="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition">
-          <i class="fas fa-file-pdf"></i> View Resume
-        </a>
-        <a href="markRodResume.pdf" download
-          class="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg shadow hover:bg-green-700 transition">
-          <i class="fas fa-download"></i> Download
-        </a>
-      </div>
-    </div>
+  <!-- Resume Section -->
+  <div class="mt-6 flex gap-3">
+    <a href="markRodResume.pdf" target="_blank" class="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition">
+      <i class="fas fa-file-pdf"></i> View Resume
+    </a>
+    <a href="markRodResume.pdf" download class="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg shadow hover:bg-green-700 transition">
+      <i class="fas fa-download"></i> Download
+    </a>
+  </div>
+</div>
 
   </section>
 
@@ -452,8 +427,43 @@
     © 2024 Mark Rod Cadayong Portfolio.
   </footer>
 
-  <div id="fb-root"></div>
-  <div id="fb-customer-chat" class="fb-customerchat"></div>
+  <!-- Messenger Chat Widget -->
+  <div id="messenger-trigger">
+    <i class="fab fa-facebook-messenger"></i>
+    <div class="chat-notification" id="message-notification" style="display: none;">1</div>
+  </div>
+
+  <div class="messenger-popup" id="messenger-popup">
+    <div class="messenger-header">
+      <img src="./images/my-picture.jpeg" alt="Mark Rod Cadayong">
+      <div>
+        <h4>Mark Rod Cadayong</h4>
+        <p class="text-xs">Typically replies instantly</p>
+      </div>
+      <div class="close-chat" id="close-chat">
+        <i class="fas fa-times"></i>
+      </div>
+    </div>
+    
+    <div class="messenger-content">
+      <div class="message incoming">
+        Hi there! 👋 How can I help you today?
+      </div>
+      <div class="message outgoing">
+        I'm interested in your web development services
+      </div>
+      <div class="message incoming">
+        Great! I'd love to discuss your project. Send me a message on Messenger and I'll get back to you right away.
+      </div>
+    </div>
+    
+    <div class="messenger-actions">
+      <button class="messenger-btn" id="open-messenger">
+        <i class="fab fa-facebook-messenger"></i>
+        Open Messenger
+      </button>
+    </div>
+  </div>
 
   <script>
     const observer = new IntersectionObserver(entries => {
@@ -467,25 +477,38 @@
     document.querySelectorAll('.fade-up').forEach(section => {
       observer.observe(section);
     });
-
-    var chatbox = document.getElementById('fb-customer-chat');
-    chatbox.setAttribute("page_id", "61553418925008"); // Page ID mo
-    chatbox.setAttribute("attribution", "biz_inbox");
-
-    window.fbAsyncInit = function () {
-      FB.init({
-        xfbml: true,
-        version: 'v18.0'
-      });
-    };
-
-    (function (d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+    
+    // Messenger Chat functionality
+    const messengerTrigger = document.getElementById('messenger-trigger');
+    const messengerPopup = document.getElementById('messenger-popup');
+    const closeChat = document.getElementById('close-chat');
+    const openMessenger = document.getElementById('open-messenger');
+    const messageNotification = document.getElementById('message-notification');
+    
+    // Toggle chat popup
+    messengerTrigger.addEventListener('click', function() {
+      if (messengerPopup.style.display === 'flex') {
+        messengerPopup.style.display = 'none';
+      } else {
+        messengerPopup.style.display = 'flex';
+        messageNotification.style.display = 'none';
+      }
+    });
+    
+    // Close chat popup
+    closeChat.addEventListener('click', function() {
+      messengerPopup.style.display = 'none';
+    });
+    
+    // Open Messenger app
+    openMessenger.addEventListener('click', function() {
+      window.open('https://m.me/mrcmrkrd', '_blank');
+    });
+    
+    // Simulate new message after 10 seconds
+    setTimeout(function() {
+      messageNotification.style.display = 'flex';
+    }, 10000);
   </script>
 </body>
 
