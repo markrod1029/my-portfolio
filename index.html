@@ -4,511 +4,823 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Web Developer — Mark Rod Peralta Cadayong</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
-
- 
+  <meta name="description"
+    content="Portfolio of Mark Rod Peralta Cadayong, a web developer working with PHP, Laravel, ASP.NET, Python, Vue.js, React, Next.js, WordPress, Dart, and Flutter." />
+  <meta name="theme-color" content="#f6f3ec" />
+  <title>Mark Rod Peralta Cadayong — Web Developer</title>
+  <script>
+    (function () {
+      var stored = localStorage.getItem("theme");
+      var theme = stored === "dark" || stored === "light"
+        ? stored
+        : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+      document.documentElement.classList.add("js");
+    })();
+  </script>
+  <link rel="icon" href="./images/my-picture.jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,560;1,9..144,560&family=Manrope:wght@500;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body class="bg-gray-50 text-gray-900 font-sans">
-  <!-- Header -->
-  <header class="sticky top-0 bg-gray-50 z-50 border-b">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<body>
+  <a class="skip-link" href="#about">Skip to content</a>
 
-      <div class="flex items-center gap-3">
-        <img src="./images/my-picture.jpeg" alt="logo" class="w-12 h-12 rounded-lg">
-        <div>
-          <h1 class="font-bold text-lg">Mark Rod Peralta Cadayong</h1>
-          <p class="text-sm text-gray-500">Web Developer </p>
-        </div>
-      </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#about">
+        <img src="./images/my-picture.jpeg" alt="" />
+        <span>
+          <strong>
+            <span class="name-full">Mark Rod Peralta Cadayong</span>
+            <span class="name-short">Mark Cadayong</span>
+          </strong>
+          <small>Web Developer</small>
+        </span>
+      </a>
 
-      <nav class="hidden md:flex gap-8 font-semibold text-gray-600 ">
-        <a href="#about" class="hover:text-blue-500">About</a>
-        <a href="#education" class="hover:text-blue-500">Education</a>
-        <a href="#skills" class="hover:text-blue-500">Skills</a>
-        <a href="#projects" class="hover:text-blue-500">Projects</a>
-        <a href="#contact" class="hover:text-blue-500">Contact</a>
+      <div class="header-end">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Open menu</span>
+        <span class="bars" aria-hidden="true"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#education">Education</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#contact">Contact</a>
+        <a class="btn btn-primary nav-cta" href="#contact">Get in touch</a>
       </nav>
+      </div>
     </div>
   </header>
 
-  <!-- Hero / Banner -->
-  <section id="about" class=" h-screen max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
-    <!-- Text Content -->
-    <div>
-      <h2 class="text-5xl font-extrabold leading-tight mb-6">
-        Building Web Experiences<br>
-        <span class="text-blue-600">That Deliver Results</span>
-      </h2>
-      <p class="text-lg text-gray-700 mb-6">
-        I'm Mark, a passionate Web Developer specializing in <span class="font-semibold">PHP, Laravel, Vue.js, and
-          WordPress</span>.
-        I craft high-performance, visually appealing websites with clean code and smooth user experiences — helping
-        businesses turn ideas into powerful online solutions.
-      </p>
-      <div class="flex gap-4">
-        <a href="#projects"
-          class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 shadow-md transition">
-          🚀 View My Work
-        </a>
-        <a href="#contact"
-          class="border border-gray-300 px-6 py-3 rounded-lg font-semibold hover:border-blue-500 transition">
-          📩 Get In Touch
-        </a>
-      </div>
-    </div>
-
-    <!-- Profile Image -->
-    <div class="relative flex justify-center hidden lg:flex ">
-      <div class="absolute -top-6 -left-6 w-64 h-64 rounded-full bg-blue-100"></div>
-      <img src="./images/my-picture.jpeg" alt="Profile"
-        class="relative w-64 h-64 object-cover rounded-full shadow-xl border-4 border-white">
-    </div>
-  </section>
-
-  <!-- Education -->
-  <section id="education" class="max-w-6xl mx-auto px-6 py-12 fade-up">
-    <h2 class="text-2xl font-bold mb-6">Education</h2>
-
-    <!-- College -->
-    <div class="flex flex-col md:flex-row gap-6 items-center mb-5">
-      <img src="./images/psu-logo.png" alt="Pangasinan State University Logo" class="edu-img">
-      <div class="bg-white p-6 rounded-lg shadow">
-        <h3 class="font-semibold text-lg">Pangasinan State University — San Carlos Campus</h3>
-        <p class="text-gray-500">Bachelor of Science in Information Technology Major in Web and Mobile Technology (2019
-          – 2023)</p>
-        <p class="mt-3 text-gray-600 leading-relaxed">
-          My college journey at Pangasinan State University was a time of both academic and personal growth, where I
-          gained a strong foundation in my chosen field while building leadership skills as the class president. I
-          actively represented my class in various school events and led initiatives that encouraged collaboration and
-          unity among my peers. I also joined web development competitions where I was challenged to create innovative
-          solutions under tight deadlines, enhancing my technical skills, creativity, and problem-solving abilities.
-          These experiences taught me the value of teamwork, adaptability, and perseverance, shaping me into a more
-          disciplined and motivated professional.
-        </p>
-      </div>
-    </div>
-
-    <!-- Senior High -->
-    <div class="flex flex-col md:flex-row gap-6 items-center mb-5">
-      <img src="./images/lilimasan-high-school-logo.png" alt="Lilimasan National High School Logo"
-        class="edu-img rounded-full">
-      <div class="bg-white p-6 rounded-lg shadow">
-        <h3 class="font-semibold text-lg">Lilimasan National High School — Senior High</h3>
-        <p class="text-gray-500">General Academic Strand (2017 – 2019)</p>
-        <p class="mt-3 text-gray-600 leading-relaxed">
-          During my Senior High School years, I strengthened my communication, research, and organizational skills
-          through various school activities, group projects, and presentations. I participated in programs that
-          encouraged teamwork, leadership, and confidence in public speaking, while also learning how to manage my time
-          effectively to balance both academic and extracurricular responsibilities. These experiences gave me the
-          discipline and adaptability I would later carry into higher education and beyond.
-        </p>
-      </div>
-    </div>
-
-    <!-- Junior High -->
-    <div class="flex flex-col md:flex-row gap-6 items-center mb-5">
-      <img src="./images/lilimasan-high-school-logo.png" alt="Lilimasan National High School Logo" class="edu-img">
-      <div class="bg-white p-6 rounded-lg shadow">
-        <h3 class="font-semibold text-lg">Lilimasan National High School — Junior High</h3>
-        <p class="text-gray-500">2013 – 2017</p>
-        <p class="mt-3 text-gray-600 leading-relaxed">
-          My Junior High School years taught me the importance of discipline, responsibility, and cooperation. I
-          actively engaged in school programs, classroom activities, and group work, learning how to collaborate with
-          others and take initiative when needed. This stage of my education helped me develop habits of punctuality,
-          respect for rules, and the ability to adapt to different situations both inside and outside the classroom.
-        </p>
-      </div>
-    </div>
-
-    <!-- Elementary -->
-    <div class="flex flex-col md:flex-row gap-6 items-center">
-      <img src="./images/lilimasan-high-school-logo.png" alt="Elementary School Logo" class="edu-img">
-      <div class="bg-white p-6 rounded-lg shadow">
-        <h3 class="font-semibold text-lg">Lilimasan Elementary School</h3>
-        <p class="text-gray-500">2007 – 2013</p>
-        <p class="mt-3 text-gray-600 leading-relaxed">
-          My elementary years were where I first learned the value of curiosity, respect, and teamwork. I participated
-          in school programs, classroom activities, and extracurricular events that helped me develop confidence and
-          social skills. These early experiences laid the groundwork for my ability to work with others, follow
-          instructions, and stay committed to completing tasks — qualities that would continue to help me in my later
-          education.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="max-w-6xl mx-auto px-6 py-12 fade-up">
-    <h2 class="text-2xl font-bold mb-8 text-center">Languages & Technologies</h2>
-
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-
-      <!-- PHP -->
-      <div class="flex flex-col items-center bg-white shadow rounded-xl p-4 hover:shadow-lg transition">
-        <img src="./images/skills/php.png" alt="PHP Logo" class="w-12 h-12 mb-3">
-        <span class="font-medium text-gray-700">PHP</span>
-      </div>
-
-      <!-- Laravel -->
-      <div class="flex flex-col items-center bg-white shadow rounded-xl p-4 hover:shadow-lg transition">
-        <img src="./images/skills/laravel.png" alt="Laravel Logo" class="w-12 h-12 mb-3">
-        <span class="font-medium text-gray-700">Laravel</span>
-      </div>
-
-      <!-- Vue.js -->
-      <div class="flex flex-col items-center bg-white shadow rounded-xl p-4 hover:shadow-lg transition">
-        <img src="./images/skills/vue.png" alt="Vue.js Logo" class="w-12 h-12 mb-3">
-        <span class="font-medium text-gray-700">Vue.js</span>
-      </div>
-
-      <!-- JavaScript -->
-      <div class="flex flex-col items-center bg-white shadow rounded-xl p-4 hover:shadow-lg transition">
-        <img src="./images/skills/javascript.png" alt="JavaScript Logo" class="w-12 h-12 mb-3">
-        <span class="font-medium text-gray-700">JavaScript</span>
-      </div>
-
-      <!-- HTML  -->
-      <div class="flex flex-col items-center bg-white shadow rounded-xl p-4 hover:shadow-lg transition">
-        <img src="./images/skills/html.png" alt="HTML and CSS Logo" class="w-12 h-12 mb-3">
-        <span class="font-medium text-gray-700">HTML5</span>
-      </div>
-      <!-- CSS  -->
-
-      <div class="flex flex-col items-center bg-white shadow rounded-xl p-4 hover:shadow-lg transition">
-        <img src="./images/skills/css.svg" alt="HTML and CSS Logo" class="w-12 h-12 mb-3">
-        <span class="font-medium text-gray-700">CSS</span>
-      </div>
-
-
-      <!-- Tailwind CSS -->
-      <div class="flex flex-col items-center bg-white shadow rounded-xl p-4 hover:shadow-lg transition">
-        <img src="./images/skills/tailwind.png" alt="Tailwind CSS Logo" class="w-12 h-12 mb-3">
-        <span class="font-medium text-gray-700">Tailwind CSS</span>
-      </div>
-      <!-- Boostrap -->
-
-      <div class="flex flex-col items-center bg-white shadow rounded-xl p-4 hover:shadow-lg transition">
-        <img src="./images/skills/boostrap.png" alt="Boostrap CSS Logo" class="w-12 h-12 mb-3">
-        <span class="font-medium text-gray-700">Boostrap CSS</span>
-      </div>
-
-      <!-- MySQL -->
-      <div class="flex flex-col items-center bg-white shadow rounded-xl p-4 hover:shadow-lg transition">
-        <img src="./images/skills/mysql.svg" alt="MySQL Logo" class="w-12 h-12 mb-3">
-        <span class="font-medium text-gray-700">MySQL</span>
-      </div>
-
-      <!-- GIT -->
-      <div class="flex flex-col items-center bg-white shadow rounded-xl p-4 hover:shadow-lg transition">
-        <img src="./images/skills/git.png" alt="Git Logo" class="w-12 h-12 mb-3">
-        <span class="font-medium text-gray-700">Git</span>
-      </div>
-
-      <!-- github -->
-      <div class="flex flex-col items-center bg-white shadow rounded-xl p-4 hover:shadow-lg transition">
-        <img src="./images/skills/github.svg" alt="Github Logo" class="w-12 h-12 mb-3">
-        <span class="font-medium text-gray-700">Github</span>
-      </div>
-
-      <!-- vit -->
-      <div class="flex flex-col items-center bg-white shadow rounded-xl p-4 hover:shadow-lg transition">
-        <img src="./images/skills/vite.png" alt="Vite Logo" class="w-12 h-12 mb-3">
-        <span class="font-medium text-gray-700">Vite</span>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="max-w-6xl mx-auto px-6 py-12 fade-up">
-    <h2 class="text-2xl font-bold mb-8 text-center">Projects</h2>
-
-    <div class="grid md:grid-cols-3 gap-6">
-
-      <!-- Project 1: Tripidkard -->
-      <div class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden flex flex-col">
-        <img src="./images/projects/tripidkard.png" alt="Tripidkard Web Application" class="w-full h-48 object-cover">
-        <div class="p-5 flex flex-col flex-grow">
-          <h3 class="font-semibold text-lg mb-2">TripidKard Web Application</h3>
-          <p class="text-gray-600 mb-3 flex-grow">
-            Full-stack Laravel + Vue.js app for merchant onboarding, admin approvals, and conditional raffle features.
-            Mobile-responsive and optimized for performance.
+  <main>
+    <section id="about" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Web developer</p>
+          <h1 class="hero-title">
+            Building web experiences
+            <span>that deliver results.</span>
+          </h1>
+          <p class="hero-copy">
+            I'm Mark, a Web Developer. I currently build with
+            <strong>PHP, Laravel, ASP.NET, Python, Vue.js, React, Next.js, WordPress, Dart, and Flutter</strong>.
+            I craft high-performance, visually appealing websites with clean code and smooth user experiences — helping
+            businesses turn ideas into powerful online solutions.
           </p>
-          <a href="https://www.upwork.com/freelancers/~0154037f742efd6679?s=1110580755107926016&p=1945011257429893120"
-            target="_blank"
-            class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">
-            View Details
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View my work</a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          </div>
+          <ul class="hero-tags" aria-label="Core technologies">
+            <li>PHP</li>
+            <li>Laravel</li>
+            <li>ASP.NET</li>
+            <li>Python</li>
+            <li>Vue.js</li>
+            <li>React</li>
+            <li>Next.js</li>
+            <li>WordPress</li>
+            <li>Flutter</li>
+          </ul>
+        </div>
 
-          </a>
+        <div class="portrait-wrap">
+          <div class="portrait-frame">
+            <img src="./images/my-picture.jpeg" alt="Portrait of Mark Rod Peralta Cadayong" fetchpriority="high" />
+          </div>
+          <p class="portrait-note">
+            Mark Rod Cadayong
+            <span>Antipolo · Pangasinan</span>
+          </p>
         </div>
       </div>
+    </section>
 
-      <!-- Project 2: GlamBook (Appointment System) -->
-      <div class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden flex flex-col">
-        <img src="./images/projects/appointment.png" alt="GlamBook - Beauty Appointments"
-          class="w-full h-48 object-cover">
-        <div class="p-5 flex flex-col flex-grow">
-          <h3 class="font-semibold text-lg mb-2">GlamBook — Beauty Appointments</h3>
-          <p class="text-gray-600 mb-3 flex-grow">
-            Custom booking system built with PHP, AJAX, jQuery and Bootstrap. Real-time booking, admin panel for
-            managing services/staff, and mobile-friendly UI for Glamorosa Beauty Parlour.
-          </p>
-          <a href="https://www.upwork.com/freelancers/~0154037f742efd6679?s=1110580755107926016&p=1945031091899154432"
-            target="_blank"
-            class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">
-            View Details
+    <section id="education" class="section reveal">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Education</p>
+          <h2>Where the foundation was built.</h2>
+          <p class="lede">From elementary through a web and mobile technology degree, with leadership and competition along the way.</p>
+        </div>
 
-          </a>
+        <ol class="timeline">
+          <li>
+            <article class="timeline-card">
+              <img src="./images/psu-logo.png" alt="Pangasinan State University logo" />
+              <div>
+                <p class="when">2019 – 2023</p>
+                <h3>Bachelor of Science in Information Technology</h3>
+                <p class="where">Pangasinan State University — San Carlos Campus · Major in Web and Mobile Technology</p>
+                <p>
+                  My college journey at Pangasinan State University was a time of both academic and personal growth, where I
+                  gained a strong foundation in my chosen field while building leadership skills as the class president. I
+                  actively represented my class in various school events and led initiatives that encouraged collaboration and
+                  unity among my peers. I also joined web development competitions where I was challenged to create innovative
+                  solutions under tight deadlines, enhancing my technical skills, creativity, and problem-solving abilities.
+                  These experiences taught me the value of teamwork, adaptability, and perseverance, shaping me into a more
+                  disciplined and motivated professional.
+                </p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="timeline-card">
+              <img src="./images/lilimasan-high-school-logo.png" alt="Lilimasan National High School logo" />
+              <div>
+                <p class="when">2017 – 2019</p>
+                <h3>Senior High School</h3>
+                <p class="where">Lilimasan National High School · General Academic Strand</p>
+                <p>
+                  During my Senior High School years, I strengthened my communication, research, and organizational skills
+                  through various school activities, group projects, and presentations. I participated in programs that
+                  encouraged teamwork, leadership, and confidence in public speaking, while also learning how to manage my time
+                  effectively to balance both academic and extracurricular responsibilities. These experiences gave me the
+                  discipline and adaptability I would later carry into higher education and beyond.
+                </p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="timeline-card">
+              <img src="./images/lilimasan-high-school-logo.png" alt="Lilimasan National High School logo" />
+              <div>
+                <p class="when">2013 – 2017</p>
+                <h3>Junior High School</h3>
+                <p class="where">Lilimasan National High School</p>
+                <p>
+                  My Junior High School years taught me the importance of discipline, responsibility, and cooperation. I
+                  actively engaged in school programs, classroom activities, and group work, learning how to collaborate with
+                  others and take initiative when needed. This stage of my education helped me develop habits of punctuality,
+                  respect for rules, and the ability to adapt to different situations both inside and outside the classroom.
+                </p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="timeline-card">
+              <img src="./images/lilimasan-high-school-logo.png" alt="Lilimasan Elementary School logo" />
+              <div>
+                <p class="when">2007 – 2013</p>
+                <h3>Elementary School</h3>
+                <p class="where">Lilimasan Elementary School</p>
+                <p>
+                  My elementary years were where I first learned the value of curiosity, respect, and teamwork. I participated
+                  in school programs, classroom activities, and extracurricular events that helped me develop confidence and
+                  social skills. These early experiences laid the groundwork for my ability to work with others, follow
+                  instructions, and stay committed to completing tasks — qualities that would continue to help me in my later
+                  education.
+                </p>
+              </div>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="skills" class="section reveal">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Skills</p>
+          <h2>Languages and technologies.</h2>
+          <p class="lede">The stack I use to design, build, and ship websites and web applications.</p>
+        </div>
+
+        <div class="skill-groups">
+          <section class="skill-group" aria-labelledby="skills-backend">
+            <h3 id="skills-backend">Backend</h3>
+            <div class="skill-grid">
+              <article class="skill">
+                <img src="./images/skills/php.png" alt="" />
+                <span>PHP</span>
+              </article>
+              <article class="skill">
+                <img src="./images/skills/laravel.png" alt="" />
+                <span>Laravel</span>
+              </article>
+              <article class="skill">
+                <img src="./images/skills/mysql.svg" alt="" />
+                <span>MySQL</span>
+              </article>
+              <article class="skill">
+                <img src="./images/skills/aspnet.svg" alt="" />
+                <span>ASP.NET</span>
+              </article>
+              <article class="skill">
+                <img src="./images/skills/python.svg" alt="" />
+                <span>Python</span>
+              </article>
+            </div>
+          </section>
+
+          <section class="skill-group" aria-labelledby="skills-frontend">
+            <h3 id="skills-frontend">Frontend</h3>
+            <div class="skill-grid">
+              <article class="skill">
+                <img src="./images/skills/vue.png" alt="" />
+                <span>Vue.js</span>
+              </article>
+              <article class="skill">
+                <img src="./images/skills/react.svg" alt="" />
+                <span>React</span>
+              </article>
+              <article class="skill">
+                <img src="./images/skills/nextjs.svg" alt="" />
+                <span>Next.js</span>
+              </article>
+              <article class="skill">
+                <img src="./images/skills/javascript.png" alt="" />
+                <span>JavaScript</span>
+              </article>
+              <article class="skill">
+                <img src="./images/skills/html.png" alt="" />
+                <span>HTML5</span>
+              </article>
+              <article class="skill">
+                <img src="./images/skills/css.svg" alt="" />
+                <span>CSS</span>
+              </article>
+              <article class="skill">
+                <img src="./images/skills/tailwind.png" alt="" />
+                <span>Tailwind CSS</span>
+              </article>
+              <article class="skill">
+                <img src="./images/skills/boostrap.png" alt="" />
+                <span>Bootstrap</span>
+              </article>
+            </div>
+          </section>
+
+          <section class="skill-group" aria-labelledby="skills-mobile">
+            <h3 id="skills-mobile">Mobile</h3>
+            <div class="skill-grid">
+              <article class="skill">
+                <img src="./images/skills/flutter.svg" alt="" />
+                <span>Flutter</span>
+              </article>
+              <article class="skill">
+                <img src="./images/skills/dart.svg" alt="" />
+                <span>Dart</span>
+              </article>
+            </div>
+          </section>
+
+          <section class="skill-group" aria-labelledby="skills-tools">
+            <h3 id="skills-tools">Tools</h3>
+            <div class="skill-grid">
+              <article class="skill">
+                <img src="./images/skills/git.png" alt="" />
+                <span>Git</span>
+              </article>
+              <article class="skill">
+                <img src="./images/skills/github.svg" alt="" />
+                <span>GitHub</span>
+              </article>
+              <article class="skill">
+                <img src="./images/skills/vite.png" alt="" />
+                <span>Vite</span>
+              </article>
+            </div>
+          </section>
         </div>
       </div>
+    </section>
 
-      <!-- Project 3: Aeonsprint Tech -->
-      <div class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden flex flex-col">
-        <img src="./images/projects/aeon.png" alt="Aeonsprint Tech Web Application" class="w-full h-48 object-cover">
-        <div class="p-5 flex flex-col flex-grow">
-          <h3 class="font-semibold text-lg mb-2">Aeonsprint Tech Web Application</h3>
-          <p class="text-gray-600 mb-3 flex-grow">
-            Laravel + Vue.js web app showcasing company services with modular components and responsive Bootstrap
-            layout. Scalable architecture ready for further features.
-          </p>
-          <a href="https://www.upwork.com/freelancers/~0154037f742efd6679?s=1110580755107926016&p=1945010258480959488"
-            target="_blank"
-            class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">
-            View Details
+    <section id="projects" class="section reveal">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Projects</p>
+          <h2>Selected client work.</h2>
+          <p class="lede">Booking systems, business sites, and full-stack applications built for real clients.</p>
+        </div>
 
-          </a>
+        <div class="project-grid">
+          <article class="project">
+            <img src="./images/projects/tripidkard.png" alt="TripidKard web application" loading="lazy" />
+            <div class="project-body">
+              <h3>TripidKard Web Application</h3>
+              <p>
+                Full-stack Laravel + Vue.js app for merchant onboarding, admin approvals, and conditional raffle features.
+                Mobile-responsive and optimized for performance.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>Laravel</li>
+                <li>Vue.js</li>
+              </ul>
+              <button class="btn btn-primary js-project-details" type="button" data-title="TripidKard Web Application" data-summary="Full-stack Laravel + Vue.js app for merchant onboarding, admin approvals, and conditional raffle features. Mobile-responsive and optimized for performance." data-image="./images/projects/tripidkard.png" data-alt="TripidKard web application" data-tags="Laravel,Vue.js" data-page="./projects/tripidkard.html">
+                View details
+              </button>
+            </div>
+          </article>
+
+          <article class="project">
+            <img src="./images/projects/appointment.png" alt="GlamBook beauty appointment system" loading="lazy" />
+            <div class="project-body">
+              <h3>GlamBook — Beauty Appointments</h3>
+              <p>
+                Custom booking system built with PHP, AJAX, jQuery and Bootstrap. Real-time booking, admin panel for
+                managing services/staff, and mobile-friendly UI for Glamorosa Beauty Parlour.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>PHP</li>
+                <li>Bootstrap</li>
+                <li>jQuery</li>
+              </ul>
+              <button class="btn btn-primary js-project-details" type="button" data-title="GlamBook — Beauty Appointments" data-summary="Custom booking system built with PHP, AJAX, jQuery and Bootstrap. Real-time booking, admin panel for managing services/staff, and mobile-friendly UI for Glamorosa Beauty Parlour." data-image="./images/projects/appointment.png" data-alt="GlamBook beauty appointment system" data-tags="PHP,Bootstrap,jQuery" data-page="./projects/glambook.html">
+                View details
+              </button>
+            </div>
+          </article>
+
+          <article class="project">
+            <img src="./images/projects/aeon.png" alt="Aeonsprint Tech web application" loading="lazy" />
+            <div class="project-body">
+              <h3>Aeonsprint Tech Web Application</h3>
+              <p>
+                Laravel + Vue.js web app showcasing company services with modular components and responsive Bootstrap
+                layout. Scalable architecture ready for further features.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>Laravel</li>
+                <li>Vue.js</li>
+                <li>Bootstrap</li>
+              </ul>
+              <button class="btn btn-primary js-project-details" type="button" data-title="Aeonsprint Tech Web Application" data-summary="Laravel + Vue.js web app showcasing company services with modular components and responsive Bootstrap layout. Scalable architecture ready for further features." data-image="./images/projects/aeon.png" data-alt="Aeonsprint Tech web application" data-tags="Laravel,Vue.js,Bootstrap" data-page="./projects/aeonsprint.html">
+                View details
+              </button>
+            </div>
+          </article>
+
+          <article class="project">
+            <img src="./images/projects/astrada.png" alt="Strada Motorwerks website" loading="lazy" />
+            <div class="project-body">
+              <h3>Strada Motorwerks Website</h3>
+              <p>
+                Modern responsive WordPress site created with Elementor—custom layouts, gallery, services, and SEO-friendly
+                structure to reflect the brand's sleek image.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>WordPress</li>
+                <li>Elementor</li>
+              </ul>
+              <button class="btn btn-primary js-project-details" type="button" data-title="Strada Motorwerks Website" data-summary="Modern responsive WordPress site created with Elementor—custom layouts, gallery, services, and SEO-friendly structure to reflect the brand's sleek image." data-image="./images/projects/astrada.png" data-alt="Strada Motorwerks website" data-tags="WordPress,Elementor" data-page="./projects/strada-motorwerks.html">
+                View details
+              </button>
+            </div>
+          </article>
+
+          <article class="project">
+            <img src="./images/projects/yellow.png" alt="Yellow Tree Café inventory system" loading="lazy" />
+            <div class="project-body">
+              <h3>Yellow Tree Café — Sales &amp; Inventory</h3>
+              <p>
+                Custom PHP + jQuery inventory and POS system for Yellow Tree Café — order handling, stock monitoring, and
+                sales reports with a mobile-friendly interface.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>PHP</li>
+                <li>jQuery</li>
+              </ul>
+              <button class="btn btn-primary js-project-details" type="button" data-title="Yellow Tree Café — Sales &amp; Inventory" data-summary="Custom PHP + jQuery inventory and POS system for Yellow Tree Café — order handling, stock monitoring, and sales reports with a mobile-friendly interface." data-image="./images/projects/yellow.png" data-alt="Yellow Tree Café inventory system" data-tags="PHP,jQuery" data-page="./projects/yellow-tree-cafe.html">
+                View details
+              </button>
+            </div>
+          </article>
+
+          <article class="project">
+            <img src="./images/projects/abino.png" alt="Abino Business Solutions website" loading="lazy" />
+            <div class="project-body">
+              <h3>Abino Business Solutions Website</h3>
+              <p>
+                This website was built using WordPress and Elementor to create a clean, modern, and professional online
+                presence for Abino Business Solutions.
+              </p>
+              <ul class="tags" aria-label="Technologies">
+                <li>WordPress</li>
+                <li>Elementor</li>
+              </ul>
+              <button class="btn btn-primary js-project-details" type="button" data-title="Abino Business Solutions Website" data-summary="This website was built using WordPress and Elementor to create a clean, modern, and professional online presence for Abino Business Solutions." data-image="./images/projects/abino.png" data-alt="Abino Business Solutions website" data-tags="WordPress,Elementor" data-page="./projects/abino.html">
+                View details
+              </button>
+            </div>
+          </article>
         </div>
       </div>
+    </section>
 
-      <!-- Project 4: Strada Motorwerks (WordPress) -->
-      <div class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden flex flex-col">
-        <img src="./images/projects/astrada.png" alt="Strada Motorwerks Website" class="w-full h-48 object-cover">
-        <div class="p-5 flex flex-col flex-grow">
-          <h3 class="font-semibold text-lg mb-2">Strada Motorwerks Website</h3>
-          <p class="text-gray-600 mb-3 flex-grow">
-            Modern responsive WordPress site created with Elementor—custom layouts, gallery, services, and SEO-friendly
-            structure to reflect the brand's sleek image.
-          </p>
-          <a href="https://www.upwork.com/freelancers/~0154037f742efd6679?s=1044578476142100494&p=1945005623271571456"
-            target="_blank"
-            class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">
-            View Details
+    <section id="contact" class="section reveal">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Contact</p>
+          <h2>Tell me about the project.</h2>
+          <p class="lede">Send a message, or reach me directly by email, phone, or Messenger.</p>
+        </div>
 
-          </a>
+        <div class="contact-layout">
+          <form class="contact-card" action="https://formspree.io/f/myzplnkw" method="POST">
+            <h2>Send me a message</h2>
+            <label class="field">
+              <span>Your name</span>
+              <input type="text" name="name" autocomplete="name" required />
+            </label>
+            <label class="field">
+              <span>Your email</span>
+              <input type="email" name="_replyto" autocomplete="email" required />
+            </label>
+            <label class="field">
+              <span>Message</span>
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit">Send message</button>
+          </form>
+
+          <aside class="info-card">
+            <h3>Contact info</h3>
+            <dl class="info-list">
+              <div>
+                <dt><i class="fas fa-envelope" aria-hidden="true"></i><span class="sr-only">Email</span></dt>
+                <dd><a href="mailto:markrodcadayong17@gmail.com">markrodcadayong17@gmail.com</a></dd>
+              </div>
+              <div>
+                <dt><i class="fas fa-phone-alt" aria-hidden="true"></i><span class="sr-only">Phone</span></dt>
+                <dd>
+                  <a href="tel:+639452318814">+63 945 231 8814</a><br />
+                  <a href="tel:+639703834385">0970 383 4385</a>
+                </dd>
+              </div>
+              <div>
+                <dt><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span class="sr-only">Locations</span></dt>
+                <dd>
+                  Cupang, Antipolo City, Rizal, Philippines<br />
+                  San Carlos City, Pangasinan, Philippines
+                </dd>
+              </div>
+            </dl>
+
+            <div class="socials" aria-label="Social profiles">
+              <a href="https://www.facebook.com/mrcmrkrd/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+              <a href="https://linkedin.com/in/mark-rod-cadayong-08a815193/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+              <a href="https://github.com/markrod1029" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+              <a href="https://instagram.com/mrk.rhd/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+              <a href="https://www.upwork.com/freelancers/~0154037f742efd6679" target="_blank" rel="noopener noreferrer" aria-label="Upwork"><i class="fas fa-briefcase" aria-hidden="true"></i></a>
+            </div>
+
+            <div class="resume-actions">
+              <a class="btn btn-primary" href="markRodResume.pdf" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-file-pdf" aria-hidden="true"></i> View resume
+              </a>
+              <a class="btn btn-ghost" href="markRodResume.pdf" download>
+                <i class="fas fa-download" aria-hidden="true"></i> Download
+              </a>
+            </div>
+          </aside>
         </div>
       </div>
+    </section>
+  </main>
 
-      <!-- Project 5: Yellow Tree Café Inventory -->
-      <div class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden flex flex-col">
-        <img src="./images/projects/yellow.png" alt="Yellow Tree Café Inventory System"
-          class="w-full h-48 object-cover">
-        <div class="p-5 flex flex-col flex-grow">
-          <h3 class="font-semibold text-lg mb-2">Yellow Tree Café — Sales & Inventory</h3>
-          <p class="text-gray-600 mb-3 flex-grow">
-            Custom PHP + jQuery inventory and POS system for Yellow Tree Café — order handling, stock monitoring, and
-            sales reports with a mobile-friendly interface.
-          </p>
-          <a href="https://www.upwork.com/freelancers/~0154037f742efd6679?s=1110580755107926016&p=1945032559872000000"
-            target="_blank"
-            class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">
-            View Details
-
-          </a>
-        </div>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Mark Rod Cadayong. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="markRodResume.pdf" download>Resume</a>
       </div>
-
-      <!-- Project 6: Gym Membership -->
-      <div class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden flex flex-col">
-        <img src="./images/projects/abino.png" alt="Gym Membership and Access System" class="w-full h-48 object-cover">
-        <div class="p-5 flex flex-col flex-grow">
-          <h3 class="font-semibold text-lg mb-2">Abino Business Solutions Website Project</h3>
-          <p class="text-gray-600 mb-3 flex-grow">
-            This website was built using WordPress and Elementor to create a clean, modern, and professional online
-            presence for Abino Business Solutions.
-          </p>
-          <a href="https://www.upwork.com/freelancers/~0154037f742efd6679?s=1044578476142100494&p=1945006661396123648"
-            target="_blank"
-            class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition">
-            View Details
-
-          </a>
-        </div>
-      </div>
-
     </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-8 fade-up">
-
-    <!-- Contact Form -->
-    <form action="https://formspree.io/f/myzplnkw" method="POST" class="bg-white p-6 rounded-lg shadow-lg space-y-4">
-      <h2 class="text-xl font-bold mb-2">Send Me a Message</h2>
-      <input type="text" name="name" placeholder="Your Name" required
-        class="w-full border border-gray-300 px-4 py-2 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition">
-      <input type="email" name="_replyto" placeholder="Your Email" required
-        class="w-full border border-gray-300 px-4 py-2 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition">
-      <textarea name="message" placeholder="Your Message" rows="4" required
-        class="w-full border border-gray-300 px-4 py-2 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition"></textarea>
-      <button type="submit"
-        class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition">
-        Send Message
-      </button>
-    </form>
-
-<!-- Contact Info -->
-<div class="bg-white p-6 rounded-lg shadow-lg">
-  <h3 class="font-semibold text-lg mb-4">Contact Info</h3>
-
-  <!-- Email -->
-  <p class="flex items-center gap-2 text-gray-600 mb-2">
-    <i class="fas fa-envelope text-blue-600"></i>
-    <a href="mailto:markrodcadayong17@gmail.com" class="hover:text-blue-600">
-      markrodcadayong17@gmail.com
-    </a>
-  </p>
-
-  <!-- Phone -->
-  <p class="flex items-center gap-2 text-gray-600 mb-2">
-    <i class="fas fa-phone-alt text-green-600"></i>
-    <a href="tel:+639452318814" class="hover:text-green-600">
-      +63 945 231 8814
-    </a>
-  </p>
-
-  <!-- Locations -->
-  <p class="flex items-center gap-2 text-gray-600">
-    <i class="fas fa-map-marker-alt text-red-500"></i>
-    Cupang, Antipolo City, Rizal, Philippines
-  </p>
-  <p class="flex items-center gap-2 text-gray-600 mb-4">
-    <i class="fas fa-map-marker-alt text-red-500"></i>
-    San Carlos City, Pangasinan, Philippines
-  </p>
-
-  <!-- Social Links -->
-  <div class="flex items-center gap-4 mt-4 text-2xl">
-    <a href="https://www.facebook.com/mrcmrkrd/" target="_blank" class="text-blue-600 hover:scale-110 transition">
-      <i class="fab fa-facebook"></i>
-    </a>
-    <a href="https://linkedin.com/in/mark-rod-cadayong-08a815193/" target="_blank" class="text-blue-500 hover:scale-110 transition">
-      <i class="fab fa-linkedin"></i>
-    </a>
-    <a href="https://github.com/markrod1029" target="_blank" class="text-gray-800 hover:scale-110 transition">
-      <i class="fab fa-github"></i>
-    </a>
-    <a href="https://instagram.com/mrk.rhd/" target="_blank" class="text-pink-500 hover:scale-110 transition">
-      <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://www.upwork.com/freelancers/~0154037f742efd6679" target="_blank" class="text-green-500 hover:scale-110 transition">
-      <i class="fas fa-briefcase"></i>
-    </a>
-  </div>
-
-  <!-- Resume Section -->
-  <div class="mt-6 flex gap-3">
-    <a href="markRodResume.pdf" target="_blank" class="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-700 transition">
-      <i class="fas fa-file-pdf"></i> View Resume
-    </a>
-    <a href="markRodResume.pdf" download class="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg shadow hover:bg-green-700 transition">
-      <i class="fas fa-download"></i> Download
-    </a>
-  </div>
-</div>
-
-  </section>
-
-  <!-- Footer -->
-  <footer class="text-center text-gray-500 py-6 border-t mt-12">
-    © 2024 Mark Rod Cadayong Portfolio.
   </footer>
 
-  <!-- Messenger Chat Widget -->
-  <div id="messenger-trigger">
-    <i class="fab fa-facebook-messenger"></i>
-    <div class="chat-notification" id="message-notification" style="display: none;">1</div>
+  <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark mode">
+    <i class="fas fa-moon" aria-hidden="true"></i>
+    <span class="theme-toggle-label">Dark</span>
+  </button>
+
+  <div id="messenger-trigger" role="button" tabindex="0" aria-label="Open chat">
+    <i class="fab fa-facebook-messenger" aria-hidden="true"></i>
+    <div class="chat-notification" id="message-notification">1</div>
   </div>
 
-  <div class="messenger-popup" id="messenger-popup">
+  <div class="messenger-popup" id="messenger-popup" role="dialog" aria-label="Chat" hidden>
     <div class="messenger-header">
-      <img src="./images/my-picture.jpeg" alt="Mark Rod Cadayong">
+      <img src="./images/my-picture.jpeg" alt="" />
       <div>
-        <h4>Mark Rod Cadayong</h4>
-        <p class="text-xs">Typically replies instantly</p>
+        <h4 id="chat-title">Chat</h4>
+        <p id="chat-status">Choose who you want to talk to</p>
       </div>
-      <div class="close-chat" id="close-chat">
-        <i class="fas fa-times"></i>
-      </div>
-    </div>
-    
-    <div class="messenger-content">
-      <div class="message incoming">
-        Hi there! 👋 How can I help you today?
-      </div>
-      <div class="message outgoing">
-        I'm interested in your web development services
-      </div>
-      <div class="message incoming">
-        Great! I'd love to discuss your project. Send me a message on Messenger and I'll get back to you right away.
+      <div class="close-chat" id="close-chat" role="button" tabindex="0" aria-label="Close chat">
+        <i class="fas fa-times" aria-hidden="true"></i>
       </div>
     </div>
-    
-    <div class="messenger-actions">
-      <button class="messenger-btn" id="open-messenger">
-        <i class="fab fa-facebook-messenger"></i>
-        Open Messenger
+
+    <div class="chat-mode" id="chat-mode">
+      <p>How do you want to talk?</p>
+      <button class="chat-choice chat-choice-person" id="choose-person" type="button">
+        <i class="fas fa-user" aria-hidden="true"></i>
+        Chat with Mark
+      </button>
+      <button class="chat-choice chat-choice-bot" id="choose-bot" type="button">
+        <i class="fas fa-robot" aria-hidden="true"></i>
+        Chatbot only
       </button>
     </div>
+
+    <div class="messenger-content" id="chat-log" hidden></div>
+
+    <form class="chat-composer" id="chat-composer" hidden>
+      <label class="chat-email-field" id="chat-email-field">
+        <span class="sr-only">Your email</span>
+        <input id="chat-email" type="email" name="email" autocomplete="email" placeholder="Your email so Mark can reply" />
+      </label>
+      <div class="chat-row">
+        <label class="sr-only" for="chat-input">Message</label>
+        <input id="chat-input" type="text" name="message" maxlength="500" placeholder="Type a message" autocomplete="off" />
+        <button class="chat-send" type="submit">Send</button>
+      </div>
+      <button class="chat-switch" id="chat-switch" type="button">Switch</button>
+    </form>
   </div>
 
+  <div class="project-modal" id="project-modal" hidden>
+    <div class="project-modal-backdrop" data-close-modal></div>
+    <div class="project-modal-dialog" id="project-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+      <button class="project-modal-close" type="button" data-close-modal aria-label="Close details">
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+      <img id="project-modal-image" alt="" />
+      <div class="project-modal-body">
+        <p class="eyebrow">Project</p>
+        <h2 id="project-modal-title"></h2>
+        <p id="project-modal-summary"></p>
+        <ul class="tags" id="project-modal-tags" aria-label="Technologies"></ul>
+        <div class="project-modal-actions">
+          <a class="btn btn-primary" id="project-modal-page" href="./projects/tripidkard.html">Open full page</a>
+          <button class="btn btn-ghost" type="button" data-close-modal>Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/theme.js"></script>
+  <script src="js/chat.js"></script>
   <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
+    function initNavigation() {
+      const toggle = document.querySelector(".menu-toggle");
+      const nav = document.getElementById("site-nav");
+      const label = toggle ? toggle.querySelector(".sr-only") : null;
+
+      if (!(toggle instanceof HTMLButtonElement) || !(nav instanceof HTMLElement)) {
+        return;
+      }
+
+      function setMenu(open) {
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        nav.classList.toggle("is-open", open);
+        if (label) {
+          label.textContent = open ? "Close menu" : "Open menu";
+        }
+      }
+
+      toggle.addEventListener("click", function () {
+        setMenu(toggle.getAttribute("aria-expanded") !== "true");
+      });
+
+      nav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          setMenu(false);
+        });
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          setMenu(false);
         }
       });
-    }, { threshold: 0.1 });
+    }
 
-    document.querySelectorAll('.fade-up').forEach(section => {
-      observer.observe(section);
-    });
-    
-    // Messenger Chat functionality
-    const messengerTrigger = document.getElementById('messenger-trigger');
-    const messengerPopup = document.getElementById('messenger-popup');
-    const closeChat = document.getElementById('close-chat');
-    const openMessenger = document.getElementById('open-messenger');
-    const messageNotification = document.getElementById('message-notification');
-    
-    // Toggle chat popup
-    messengerTrigger.addEventListener('click', function() {
-      if (messengerPopup.style.display === 'flex') {
-        messengerPopup.style.display = 'none';
-      } else {
-        messengerPopup.style.display = 'flex';
-        messageNotification.style.display = 'none';
+    function initSectionHighlight() {
+      const links = document.querySelectorAll(".nav-link");
+      const sections = document.querySelectorAll("main section[id]");
+
+      if (links.length === 0 || sections.length === 0) {
+        return;
       }
-    });
-    
-    // Close chat popup
-    closeChat.addEventListener('click', function() {
-      messengerPopup.style.display = 'none';
-    });
-    
-    // Open Messenger app
-    openMessenger.addEventListener('click', function() {
-      window.open('https://m.me/mrcmrkrd', '_blank');
-    });
-    
-    // Simulate new message after 10 seconds
-    setTimeout(function() {
-      messageNotification.style.display = 'flex';
-    }, 10000);
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) {
+            return;
+          }
+          links.forEach(function (link) {
+            const active = link.getAttribute("href") === "#" + entry.target.id;
+            if (active) {
+              link.setAttribute("aria-current", "page");
+            } else {
+              link.removeAttribute("aria-current");
+            }
+          });
+        });
+      }, { rootMargin: "-45% 0px -50% 0px", threshold: 0 });
+
+      sections.forEach(function (section) {
+        observer.observe(section);
+      });
+    }
+
+    function initReveal() {
+      const nodes = document.querySelectorAll(".reveal");
+      if (nodes.length === 0 || !("IntersectionObserver" in window)) {
+        nodes.forEach(function (node) {
+          node.classList.add("is-visible");
+        });
+        return;
+      }
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      nodes.forEach(function (node) {
+        observer.observe(node);
+      });
+    }
+
+    function initYear() {
+      const year = document.getElementById("year");
+      if (year) {
+        year.textContent = String(new Date().getFullYear());
+      }
+    }
+
+    function initProjectModal() {
+      const modal = document.getElementById("project-modal");
+      const dialog = document.getElementById("project-modal-dialog");
+      const image = document.getElementById("project-modal-image");
+      const title = document.getElementById("project-modal-title");
+      const summary = document.getElementById("project-modal-summary");
+      const tags = document.getElementById("project-modal-tags");
+      const pageLink = document.getElementById("project-modal-page");
+
+      if (!(modal instanceof HTMLElement) || !(dialog instanceof HTMLElement) || !(tags instanceof HTMLElement)) {
+        return;
+      }
+
+      let lastFocus = null;
+
+      function focusableItems() {
+        return Array.from(dialog.querySelectorAll("a, button")).filter(function (item) {
+          return item instanceof HTMLElement && !item.hasAttribute("disabled");
+        });
+      }
+
+      function openModal(button) {
+        const tagList = (button.getAttribute("data-tags") || "")
+          .split(",")
+          .map(function (tag) { return tag.trim(); })
+          .filter(function (tag) { return tag.length > 0; });
+
+        if (image instanceof HTMLImageElement) {
+          image.src = button.getAttribute("data-image") || "";
+          image.alt = button.getAttribute("data-alt") || "";
+        }
+        if (title) {
+          title.textContent = button.getAttribute("data-title") || "";
+        }
+        if (summary) {
+          summary.textContent = button.getAttribute("data-summary") || "";
+        }
+        if (pageLink instanceof HTMLAnchorElement) {
+          pageLink.href = button.getAttribute("data-page") || "#projects";
+        }
+
+        tags.replaceChildren();
+        tagList.forEach(function (tag) {
+          const item = document.createElement("li");
+          item.textContent = tag;
+          tags.appendChild(item);
+        });
+
+        lastFocus = document.activeElement;
+        modal.hidden = false;
+        document.body.classList.add("modal-open");
+        const closeButton = dialog.querySelector(".project-modal-close");
+        if (closeButton instanceof HTMLElement) {
+          closeButton.focus();
+        }
+      }
+
+      function closeModal() {
+        if (modal.hidden) {
+          return;
+        }
+        modal.hidden = true;
+        document.body.classList.remove("modal-open");
+        if (lastFocus instanceof HTMLElement) {
+          lastFocus.focus();
+        }
+      }
+
+      document.querySelectorAll(".js-project-details").forEach(function (button) {
+        button.addEventListener("click", function () {
+          if (button instanceof HTMLButtonElement) {
+            openModal(button);
+          }
+        });
+      });
+
+      modal.addEventListener("click", function (event) {
+        const target = event.target;
+        if (target instanceof Element && target.closest("[data-close-modal]")) {
+          closeModal();
+        }
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (modal.hidden) {
+          return;
+        }
+        if (event.key === "Escape") {
+          closeModal();
+          return;
+        }
+        if (event.key !== "Tab") {
+          return;
+        }
+        const items = focusableItems();
+        if (items.length === 0) {
+          return;
+        }
+        const first = items[0];
+        const last = items[items.length - 1];
+        if (!(first instanceof HTMLElement) || !(last instanceof HTMLElement)) {
+          return;
+        }
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      });
+    }
+
+    function initEqualSkillCards() {
+      const groups = document.querySelector(".skill-groups");
+      if (!(groups instanceof HTMLElement)) {
+        return;
+      }
+
+      const cards = Array.from(groups.querySelectorAll(".skill-group")).filter(function (card) {
+        return card instanceof HTMLElement;
+      });
+      const wideLayout = window.matchMedia("(min-width: 981px)");
+
+      function equalize() {
+        cards.forEach(function (card) {
+          card.style.minHeight = "";
+        });
+        if (!wideLayout.matches) {
+          return;
+        }
+
+        let tallest = 0;
+        cards.forEach(function (card) {
+          tallest = Math.max(tallest, card.offsetHeight);
+        });
+        cards.forEach(function (card) {
+          card.style.minHeight = String(tallest) + "px";
+        });
+      }
+
+      equalize();
+      window.addEventListener("resize", equalize);
+      window.addEventListener("load", equalize);
+      if (document.fonts) {
+        document.fonts.ready.then(equalize);
+      }
+    }
+
+    initNavigation();
+    initSectionHighlight();
+    initReveal();
+    initYear();
+    initProjectModal();
+    initEqualSkillCards();
   </script>
 </body>
 
